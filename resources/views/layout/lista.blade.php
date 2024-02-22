@@ -14,8 +14,7 @@
     <div class="max-w-4xl mx-auto bg-white rounded p-8">
         <div class="flex justify-between items-center mb-4">
             <h2 class="text-2xl font-bold">Tabla de Usuarios</h2>
-            <button type="submit"
-                class="bg-blue-900 hover:bg-blue-700 text-white text-[13px] py-2 px-14 rounded">Agregar</button>
+            <a href="{{ route('index') }}" class="bg-blue-900 hover:bg-blue-700 text-white text-[13px] py-2 px-14 rounded">Agregar</a>
         </div>
         <div class="overflow-x-auto">
             <table class="table-auto w-full">
@@ -26,10 +25,10 @@
                     </tr>
                 </thead>
                 @foreach ($datos as $dato)
-                    <tbody>
-                        <td class="border px-4 py-2">{{ $dato->nombre }}</td>
-                        <td class="border px-4 py-2">{{ $dato->correo }}</td>
-                    </tbody>
+                <tbody>
+                    <td class="border px-4 py-2">{{ $dato->nombre }}</td>
+                    <td class="border px-4 py-2">{{ $dato->correo }}</td>
+                </tbody>
                 @endforeach
             </table>
         </div>
